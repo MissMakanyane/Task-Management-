@@ -1,6 +1,8 @@
 from ..import mongo
+from flask_bcrypt import Bcrypt
 
 
-class Get_admin:
-    def admin_collection(admin_data):
-        return mongo.db.admin_collection.insert_one(admin_data)
+class Data_admin:
+    def create_new(signup_data):
+        return mongo.db.user.insert_one(signup_data)
+    

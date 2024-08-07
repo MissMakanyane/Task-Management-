@@ -1,5 +1,5 @@
 from flask import Flask,url_for,redirect,Response,request,render_template,flash, jsonify
-from ..models.admin_models import Get_admin
+from ..models.admin_models import Data_admin
 from flask_jwt_extended import JWTManager,create_access_token,jwt_required,get_jwt_identity,get_jwt
 
 def admin_signup():
@@ -9,8 +9,8 @@ def admin_signup():
     cell_number = request.json.get('cell_number')
     password = request.json.get('password')
     
-    signup = {'full_name': full_name,  'email': email,'cell_number': cell_number, 'password': password,}
-    Get_admin.create_new(signup)
+    signup_data = {'full_name': full_name,  'email': email,'cell_number': cell_number, 'password': password,}
+    Data_admin.create_new(signup_data)
    
     return jsonify({'message': 'succesful'})
 

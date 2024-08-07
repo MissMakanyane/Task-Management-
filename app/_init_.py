@@ -9,7 +9,5 @@ def create_app():
     
     mongo.init_app(app)
     with app.app_context():
-        from .routes import product_routes
-        app.register_blueprint(product_routes)
-
-    return app
+        
+        return app

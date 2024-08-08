@@ -12,4 +12,3 @@ def Register():
         details = {"name": name, "email": email, "password": password}
        
     
-        if (User.create_user(details)):

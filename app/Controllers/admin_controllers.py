@@ -14,3 +14,13 @@ def admin_signup():
    
     return jsonify({'message': 'succesful'})
 
+def admin_login():
+    if request.method == "POST":
+        name = request.form["username"]
+        password = request.form["password"]
+
+        LoginDetails = {"name": name, "password": password}
+        if Data_admin.create_new(LoginDetails):
+           return jsonify({'message': 'succesful'})
+            
+        

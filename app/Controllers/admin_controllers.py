@@ -8,7 +8,7 @@ def admin_signup():
     email = request.json.get('email')
     cell_number = request.json.get('cell_number')
     password = request.json.get('password')
-    
+   
     signup_data = {'full_name': full_name,  'email': email,'cell_number': cell_number, 'password': password,}
     Data_admin.create_new(signup_data)
    
@@ -23,4 +23,4 @@ def admin_login():
         if Data_admin.create_new(LoginDetails):
            return jsonify({'message': 'succesful'})
             
-        
+    return True   

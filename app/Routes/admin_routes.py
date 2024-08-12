@@ -5,5 +5,4 @@ app = Blueprint('admin', __name__)
 
 
 app.route('/admin_signup', methods=['POST'])(admin_controllers.admin_signup)
-
-# app.route('/admin_login', method=['POST'])(admin_controllers.admin_login)
+app.route('/admin_login', methods=['POST'])(admin_controllers.admin_login)
